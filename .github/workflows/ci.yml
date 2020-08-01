@@ -1,0 +1,38 @@
+---
+
+name: CI
+
+on:
+  pull_request: null
+  push:
+    branches:
+      - '**'
+    tags:
+      - '*'
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Lint Dockerfile
+        uses: brpaz/hadolint-action@master
+        with:
+          dockerfile: "Dockerfile"
+  release:
+    if: github.event_name == 'push' && contains(github.ref, 'refs/tags/')
+    needs:
+      - linter
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          body: ''
+          draft: false
+          prerelease: false

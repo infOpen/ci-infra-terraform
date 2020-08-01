@@ -1,5 +1,9 @@
 # Docker image: CI with Terraform and related tools
 
+![Docker Build Status](https://img.shields.io/docker/cloud/build/infopen/ci-infra-terraform)
+![Docker Automated build](https://img.shields.io/docker/cloud/automated/infopen/ci-infra-terraform)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/infopen/docker-ci-infra-terraform/CI)
+
 This repository manage Docker image build configuration to have an image with:
 
 * [ASDF](https://github.com/asdf-vm/asdf) - `v0.8.0-rc1`
