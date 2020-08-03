@@ -10,6 +10,7 @@ This repository manage Docker image build configuration to have an image with:
 * [Commitizen](https://github.com/commitizen-tools/commitizen) - `v2.0.1`
 * [Pre-Commit](https://github.com/pre-commit/pre-commit) - `v2.6.0`
 * [Terraform](https://www.terraform.io/) - `0.13.0-rc1`
+* [Terraform-docs](https://github.com/terraform-docs/terraform-docs) - `v0.9.1`
 * [Terragrunt](https://github.com/gruntwork-io/terragrunt) - `v0.23.32`
 * [TFLint](https://github.com/terraform-linters/tflint) - `v0.18.0`
 * [TFSec](https://github.com/liamg/tfsec) - `v0.24.1`
