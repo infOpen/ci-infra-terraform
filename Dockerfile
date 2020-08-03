@@ -5,7 +5,7 @@ ARG ASDF_VERSION="v0.8.0-rc1"
 ARG COMMITIZEN_VERSION="v2.0.1"
 ARG PRECOMMIT_VERSION="v2.6.0"
 
-ARG ASDF_APPS="terraform:0.13.0-rc1,terragrunt:0.23.32,tflint:0.18.0,tfsec:0.24.1"
+ARG ASDF_APPS="terraform:0.13.0-rc1,terraform-docs:v0.9.1,terragrunt:0.23.32,tflint:0.18.0,tfsec:0.24.1"
 
 # Install required dependencies
 RUN dnf install -y curl git python3 python3-pip unzip \
